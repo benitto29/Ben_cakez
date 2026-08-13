@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="BeN Cakez - Freshly baked brownies made with love.">
+
+    <title>BeN Cakez | Freshly Baked Happiness</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================================= -->
+<!-- NAVIGATION -->
+<!-- ================================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            BeN Cakez 🍰
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#menu">Menu</a>
+
+            <a href="#about">About</a>
+
+            <a href="#cart">
+                Cart 🛒
+                <span id="cart-count">0</span>
+            </a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================================= -->
+<!-- HERO SECTION -->
+<!-- ================================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-label">
+            WELCOME TO
+        </p>
+
+        <h1>
+            BeN Cakez 🍰
+        </h1>
+
+        <h2>
+            Freshly Baked Happiness
+        </h2>
+
+        <p class="hero-description">
+
+            Delicious homemade brownies
+            prepared with quality ingredients
+            and lots of love.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#menu"
+               class="primary-button">
+
+                Explore Menu 🍫
+
+            </a>
+
+
+            <a href="#contact"
+               class="secondary-button">
+
+                Contact Us 📱
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/hero image.jpg"
+            alt="BeN Cakez delicious brownies"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- MENU SECTION -->
+<!-- ================================= -->
+
+<section id="menu" class="menu-section">
+
+    <div class="section-heading">
+
+        <p>
+            OUR SPECIALITIES
+        </p>
+
+        <h2>
+            Our Menu 🍫
+        </h2>
+
+        <span>
+            Freshly baked treats made for you.
+        </span>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- =========================== -->
+        <!-- BROWNIE -->
+        <!-- =========================== -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/brownie.jpg"
+                    alt="Chocolate Brownie"
+                >
+
+            </div>
+
+
+            <div class="product-content">
+
+                <h3>
+                    Chocolate Brownie
+                </h3>
+
+                <p>
+                    Rich, fudgy and delicious
+                    chocolate brownie.
+                </p>
+
+
+                <div class="product-price">
+                    ₹80
+                </div>
+
+
+                <div class="quantity">
+
+                    <button
+                        onclick="changeQuantity('brownie', -1)">
+                        −
+                    </button>
+
+                    <span id="brownie-quantity">
+                        1
+                    </span>
+
+                    <button
+                        onclick="changeQuantity('brownie', 1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="product-total">
+
+                    Total:
+                    ₹<span id="brownie-total">80</span>
+
+                </div>
+
+
+                <button
+                    class="add-cart-button"
+                    onclick="addToCart('brownie')">
+
+                    Add to Cart 🛒
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================== -->
+        <!-- BROWNIE TUB -->
+        <!-- =========================== -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/browine tub.jpg"
+                    alt="Brownie Tub"
+                >
+
+            </div>
+
+
+            <div class="product-content">
+
+                <h3>
+                    Brownie Tub
+                </h3>
+
+                <p>
+                    A delicious tub filled
+                    with fudgy brownies.
+                </p>
+
+
+                <div class="product-price">
+                    ₹250
+                </div>
+
+
+                <div class="quantity">
+
+                    <button
+                        onclick="changeQuantity('tub', -1)">
+                        −
+                    </button>
+
+                    <span id="tub-quantity">
+                        1
+                    </span>
+
+                    <button
+                        onclick="changeQuantity('tub', 1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="product-total">
+
+                    Total:
+                    ₹<span id="tub-total">250</span>
+
+                </div>
+
+
+                <button
+                    class="add-cart-button"
+                    onclick="addToCart('tub')">
+
+                    Add to Cart 🛒
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================== -->
+        <!-- BROWNIE SLAB -->
+        <!-- =========================== -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <imgimage
+                    src="images/browine slab.webp"
+                    alt="Brownie Slab"
+                >
+
+            </div>
+
+
+            <div class="product-content">
+
+                <h3>
+                    Brownie Slab
+                </h3>
+
+                <p>
+                    A generous brownie slab
+                    perfect for sharing.
+                </p>
+
+
+                <div class="product-price">
+                    ₹490
+                </div>
+
+
+                <div class="quantity">
+
+                    <button
+                        onclick="changeQuantity('slab', -1)">
+                        −
+                    </button>
+
+                    <span id="slab-quantity">
+                        1
+                    </span>
+
+                    <button
+                        onclick="changeQuantity('slab', 1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <div class="product-total">
+
+                    Total:
+                    ₹<span id="slab-total">490</span>
+
+                </div>
+
+
+                <button
+                    class="add-cart-button"
+                    onclick="addToCart('slab')">
+
+                    Add to Cart 🛒
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- WHY CHOOSE US -->
+<!-- ================================= -->
+
+<section class="why-section">
+
+    <div class="section-heading">
+
+        <p>
+            WHY BEN CAKEZ
+        </p>
+
+        <h2>
+            Made With Love ❤️
+        </h2>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature-card">
+
+            <div>
+                🍫
+            </div>
+
+            <h3>
+                Freshly Baked
+            </h3>
+
+            <p>
+                Fresh and delicious brownies
+                made with care.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div>
+                ❤️
+            </div>
+
+            <h3>
+                Made With Love
+            </h3>
+
+            <p>
+                Every treat is prepared
+                with passion.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div>
+                ⭐
+            </div>
+
+            <h3>
+                Quality Ingredients
+            </h3>
+
+            <p>
+                We focus on quality and
+                delicious taste.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div>
+                📦
+            </div>
+
+            <h3>
+                Easy Ordering
+            </h3>
+
+            <p>
+                Choose your treats and
+                order easily.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- CART SECTION -->
+<!-- ================================= -->
+
+<section id="cart" class="cart-section">
+
+    <div class="section-heading">
+
+        <p>
+            YOUR ORDER
+        </p>
+
+        <h2>
+            Shopping Cart 🛒
+        </h2>
+
+    </div>
+
+
+    <div id="cart-items">
+
+        <div class="empty-cart">
+
+            <div>
+                🛒
+            </div>
+
+            <p>
+                Your cart is empty.
+            </p>
+
+            <a href="#menu">
+                Browse Menu
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <h3>
+            Total:
+            ₹<span id="cart-total">0</span>
+        </h3>
+
+
+        <button
+            onclick="checkoutCart()"
+            class="whatsapp-button">
+
+            Order on WhatsApp 📱
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- ABOUT SECTION -->
+<!-- ================================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+            <h2>
+                About BeN Cakez 🍰
+            </h2>
+
+            <p>
+
+                BeN Cakez is a homemade baking
+                brand created with a passion
+                for delicious brownies and
+                sweet treats.
+
+            </p>
+
+            <p>
+
+                Every brownie is prepared with
+                care, quality ingredients and
+                lots of love.
+
+            </p>
+
+            <p>
+
+                Our goal is simple:
+
+                <strong>
+                    Make every bite special. ❤️
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div>
+                🍰
+            </div>
+
+            <h3>
+                BeN Cakez
+            </h3>
+
+            <p>
+                Freshly Baked Happiness
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- CONTACT SECTION -->
+<!-- ================================= -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading">
+
+        <p>
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            Contact BeN Cakez 📱
+        </h2>
+
+        <span>
+            Have a question or want to place an order?
+        </span>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-card">
+
+            <div>
+                📱
+            </div>
+
+            <h3>
+                WhatsApp
+            </h3>
+
+            <p>
+                Chat with us to place your order.
+            </p>
+
+            <!-- CHANGE THIS NUMBER -->
+
+            <a
+                href="8122684253"
+                target="_blank">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div>
+                📸
+            </div>
+
+            <h3>
+                Instagram
+            </h3>
+
+            <p>
+                Follow BeN Cakez for updates.
+            </p>
+
+            <!-- CHANGE THIS USERNAME -->
+
+            <a
+                href="https://www.instagram.com/ben_cakez?igsh=MTQ0MmxnMWwwZDgybQ=="
+                target="_blank">
+
+                Visit Instagram
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div>
+                📍
+            </div>
+
+            <h3>
+                Location
+            </h3>
+
+            <p>
+                Nagercoil, Tamil Nadu
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>
+            BeN Cakez 🍰
+        </h2>
+
+        <p>
+            Freshly Baked Happiness ❤️
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+
+            © 2026 BeN Cakez.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
